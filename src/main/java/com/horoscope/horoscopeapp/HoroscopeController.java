@@ -73,13 +73,12 @@ public class HoroscopeController {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             int responseCode = conn.getResponseCode();
-            System.out.println("Response code: " + responseCode);
+
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 String response = readResponse(conn.getInputStream());
 
                 String horoscope = parseJSONData(response);
                 responseHoroscopeBox.setVisible(true);
-
                 responseHoroscopeTitle.setText("Your " + this.DMW + " horoscope" + " is:");
 
                 responseHoroscopeMessage.setWrapText(true);

@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,7 +32,8 @@ public class MainClass extends Application {
 
         borderPane.setBackground(new Background(background));
 
-        Scene scene = new Scene(borderPane, 800, 600);
+        Screen screen = Screen.getPrimary();
+        Scene scene = new Scene(borderPane, screen.getBounds().getWidth() , screen.getBounds().getHeight());
 
         stage.setTitle("Your daily horoscope");
         stage.setScene(scene);
