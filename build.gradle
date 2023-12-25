@@ -26,7 +26,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.horoscope.horoscopeapp'
-    mainClass = 'com.horoscope.horoscopeapp.HelloApplication'
+    mainClass = 'com.horoscope.horoscopeapp.MainClass'
 }
 
 javafx {
@@ -35,10 +35,16 @@ javafx {
 }
 
 dependencies {
-
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
 }
+
+configurations {
+    configureEach {
+        exclude group: 'org.hamcrest'
+    }
+}
+
 
 test {
     useJUnitPlatform()

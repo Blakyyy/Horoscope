@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.horoscope.horoscopeapp.HoroscopeController">
+
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+
+    <Label fx:id="chooseYourSign" text="Choose Your Sign" style="-fx-font-size: 20pt; -fx-text-fill: white;"/>
+
+
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Aries" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;" />
+        <Button text="Taurus" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Gemini" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+    </HBox>
+
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Cancer" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Leo" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Virgo" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+    </HBox>
+
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Libra" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Scorpio" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Sagittarius" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+    </HBox>
+
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Capricorn" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Aquarius" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+        <Button text="Pisces" onAction="#onSignButtonClick" style="-fx-font-size: 14pt;"/>
+    </HBox>
+
+    <VBox fx:id="signDetailsBox" spacing="10.0" alignment="CENTER" visible="false" style="-fx-font-size: 20pt;">
+        <Label fx:id="signDetailsTitle" text="" style="-fx-text-fill: white;"/>
+        <HBox spacing="10.0" alignment="CENTER">
+            <Button text="Today" onAction="#onDateButtonClick" style="-fx-font-size: 14pt;"/>
+            <Button text="Weekly" onAction="#onDateButtonClick" style="-fx-font-size: 14pt;"/>
+            <Button text="Monthly" onAction="#onDateButtonClick" style="-fx-font-size: 14pt;"/>
+        </HBox>
+    </VBox>
+
+    <VBox fx:id="responseHoroscopeBox" spacing="10.0" alignment="CENTER" visible="false" style="-fx-font-size: 20pt;">
+        <Label fx:id="responseHoroscopeTitle" text="" style="-fx-font-size: 20pt; -fx-text-fill: white;"/>
+        <Label fx:id="responseHoroscopeMessage" text="" style="-fx-font-size: 14pt; -fx-padding: 0 30 0 30; -fx-text-fill: white;"/>
+        <Label fx:id="errorLabel" text="" style="-fx-font-size: 14pt; -fx-text-fill: red;"/>
+    </VBox>
+
+
+</VBox>
+
+
+
